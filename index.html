@@ -7,11 +7,41 @@
                 width: 1400px;
                 height: auto;
             }
+            h1 {
+                color: blue;
+            }
         </style>
     </head>
     <body>
         <h1>My Cool Website</h1>
         <p>I think HTML is tufff</p>
+       
         <img src="https://www.home-alchemy.com/cdn/shop/files/20230406_121143_5000x.jpg?v=1687356409">
+
+        <blockquote>"True peace is not merely the absence of tension: it is the presence of justice." - Martin Luther King Jr</blockquote>
+        <button onclick="changeQuote()">Change Quote</button>
+
+        <script>
+            var index = 0;
+
+            function changeQuote() {
+                var quotes = [
+                    `"I really like web development!" - Yash Pathak`, 
+                    `"I am a really cool guy!" - Yash Pathak`,
+                    `"Coding is tuff!" - Yash Pathak`,
+                    `"True peace is not merely the absence of tension: it is the presence of justice." - Martin Luther King Jr"`
+                ];
+
+                var blockquote = document.querySelector("blockquote");
+                blockquote.innerHTML = quotes[index];
+
+                index++;
+                if (index >= 4) {
+                    index =0;
+                }
+            }
+        </script>
+
     </body>
+
 </html>
